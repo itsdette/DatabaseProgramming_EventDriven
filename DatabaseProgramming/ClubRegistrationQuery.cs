@@ -24,7 +24,6 @@ namespace DatabaseProgramming
 
         public ClubRegistrationQuery()
         {
-            //change kopa data source neto
             connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tomin\source\repos\DatabaseProgramming\DatabaseProgramming\ClubDB.mdf;Integrated Security=True";
             sqlConnect = new SqlConnection(connectionString);
             dataTable = new DataTable();
@@ -94,8 +93,7 @@ namespace DatabaseProgramming
                 }
                 else
                 {
-                    // Handle the case where the student ID is not found
-                    // You might want to clear the textboxes or display an error message
+                    MessageBox.Show("StudentID not found!");
                 }
                 sqlConnect.Close();
             }
