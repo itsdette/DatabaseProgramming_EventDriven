@@ -27,7 +27,6 @@ namespace DatabaseProgramming
 
         private void FrmUpdateMember_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'clubDBDataSet.ClubMembers' table. You can move, or remove it, as needed.
             this.clubMembersTableAdapter.Fill(this.clubDBDataSet.ClubMembers);
             this.clubMembersTableAdapter.Fill(this.clubDBDataSet.ClubMembers);
             clubRegistrationQuery = new ClubRegistrationQuery();
@@ -41,7 +40,6 @@ namespace DatabaseProgramming
             if (comboBoxStudentID.SelectedItem != null)
             {
                 long selectedStudentID = Convert.ToInt64(comboBoxStudentID.SelectedItem);
-                // clubRegistrationQuery.GetStudentData(selectedStudentID); // This method should retrieve the data of the selected student ID from the database
                 clubRegistrationQuery.GetStudentData(selectedStudentID);
                 TextFill();
             }
